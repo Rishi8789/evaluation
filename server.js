@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
+// require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(`mongodb+srv://rishi8789:rishimongodb@cluster0.0dchohe.mongodb.net/?retryWrites=true&w=majority/finalEvaluation`);
 
 app.use(express.json());
 app.use('/api', require('./routes'));
